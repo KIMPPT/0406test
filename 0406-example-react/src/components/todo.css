@@ -1,0 +1,26 @@
+li
+{
+    list-style:none;
+    font-size:1.5rem;
+    padding-bottom:10px;
+}
+.on
+{
+    color:gray;
+    text-decoration:1px solid line-through;
+    background-color: rgba(0,0,255,0.7);
+    border-radius:30px;
+    transition:background-color 0.5s;
+}
+.off
+{
+    border-radius:30px;
+    transition:all 0.5s;
+}
+.todolist{
+    width:300px;
+    background:linear-gradient(0.25turn,green,white,yellow);
+    padding:20px 0;
+    position:relative;
+    left:30%
+}
