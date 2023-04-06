@@ -1,6 +1,7 @@
-ul{
+li{
     list-style:none;
 }
 .on{
     color:gray;
+    text-decoration-line: line-through;
 }
