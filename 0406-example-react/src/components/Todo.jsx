@@ -9,7 +9,7 @@ let list2 = [
 ];
 let newlist2 = list2;
 let newlist3 = list2;
-let newlist4 = list2;
+let newlist4;
 let todaylist = () => {
   let month = date.getMonth();
   let day = date.getDate();
