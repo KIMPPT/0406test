@@ -9,7 +9,8 @@ let list2 = [
 ];
 let newlist2 = list2;
 let newlist3 = list2;
-let newlist4;
+let newlist4 = list2;
+let newlist5= list2;
 let todaylist = () => {
   let month = date.getMonth();
   let day = date.getDate();
@@ -20,9 +21,10 @@ let Todo = () => {
   let [inputlist, setInputlist] = useState("");
   console.log("todolists", todolists); // State로 받은 todolists 값
   console.log("list2", list2); //변하지 않는 초기 리스크 값
-  console.log("newlist3", newlist3); //check변경 이벤트 로 생성된 list 값
-  console.log("newlist2", newlist2); //추가이벤트로 생성된 list값
-  console.log("newlist4", newlist4); //오늘 할 일 버튼 이벤트로 생성된 list 값
+  console.log("추가이벤트리스트", newlist3); //check변경 이벤트 로 생성된 list 값 - todolists와 값 동일함
+  console.log("체크박스이벤트리스트", newlist2); //추가이벤트로 생성된 list값 - 체크박스 건드릴 시 checked 값 변경됨
+  console.log("오늘 할 일 이벤트 리스트", newlist4); //오늘 할 일 버튼 누르면 배열애 생성됨
+  console.log("삭제이벤트리스트",newlist5); //삭제이벤트 시 배열이 생성됨
   return (
     <div className="todolist">
       <h1>Todo-List</h1>
@@ -69,8 +71,8 @@ let Todo = () => {
       <button
         onClick={() => {
           let newlist = todolists.filter((list) => list.date === todaylist());
-          setTodolist(newlist);
           newlist4 = newlist;
+          setTodolist(newlist);
         }}
       >
         오늘 할 일
@@ -102,6 +104,7 @@ let Todo = () => {
           <button
             onClick={() => {
               let newList = todolists.filter((list) => list.id !== todolist.id);
+              newlist5=newList;
               setTodolist(newList);
             }}
           >
